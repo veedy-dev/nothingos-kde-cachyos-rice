@@ -1,6 +1,7 @@
 # NothingOS-inspired KDE Plasma rice
 
-Set up a complete monochrome, NothingOS-inspired desktop on KDE Plasma 6.
+Set up a complete monochrome, NothingOS-inspired desktop on KDE Plasma 6,
+regardless of which Linux distribution you use.
 The installer configures the Plasma layout, widgets, themes, animations,
 OLED-friendly behavior, and Fastfetch while backing up your existing desktop
 configuration first.
@@ -28,7 +29,7 @@ screen geometry instead of being tied to one monitor.
 
 ## Supported setup
 
-- CachyOS or Arch Linux
+- any Linux distribution running KDE Plasma
 - KDE Plasma **6.7+**
 - a Plasma Wayland session
 - one primary display
@@ -39,13 +40,18 @@ The screenshot shows the 5120×1440 reference layout. On a regular 16:9
 display, the same widgets stay anchored to the left and right edges with
 scaled sizes and margins, leaving the center available for windows.
 
+Dependency installation is automatic on Arch-based, Debian/Ubuntu-based,
+Fedora, and openSUSE systems. On another distribution, install CMake, a C++
+compiler, Qt 6 development files, and optionally Fastfetch, then run the
+installer with `--no-packages`.
+
 ## Install
 
 Review the script first—this changes your Plasma layout and KDE preferences.
 
 ```bash
-git clone https://github.com/veedy-dev/nothingos-kde-cachyos-rice.git
-cd nothingos-kde-cachyos-rice
+git clone https://github.com/veedy-dev/nothingos-kde-plasma-rice.git
+cd nothingos-kde-plasma-rice
 ./install.sh
 ```
 
@@ -53,7 +59,7 @@ Useful modes:
 
 ```bash
 ./install.sh --dry-run        # show actions without changing anything
-./install.sh --no-packages    # do not run pacman
+./install.sh --no-packages    # skip distribution package installation
 ./install.sh --layout-only    # reinstall only the Plasma layout
 ```
 

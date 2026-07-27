@@ -1,8 +1,9 @@
 # Components and versions
 
-The published snapshot was tested on:
+The configuration is distribution-independent. The published snapshot was
+developed and tested on:
 
-- CachyOS, KDE Plasma Workspace 6.7.3
+- KDE Plasma Workspace 6.7.3 on CachyOS
 - KWin 6.7.3, Wayland
 - Fastfetch 2.66.0
 - Qt 6.11.1
@@ -39,4 +40,3 @@ The published snapshot was tested on:
 
 No black-overlay screensaver is installed. Native display power management is
 used instead.
-
