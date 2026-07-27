@@ -1,0 +1,14 @@
+[Unit]
+Description=NothingOS grouped desktop widget proximity state
+After=graphical-session.target plasma-plasmashell.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/libexec/nothingos-edge-groups
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
+

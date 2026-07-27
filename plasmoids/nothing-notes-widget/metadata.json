@@ -1,0 +1,16 @@
+{
+    "KPlugin": {
+        "Authors": [{ "Email": "", "Name": "Nothing Notes Widget" }],
+        "Category": "Utilities",
+        "Description": "Nothing OS styled notes widget with multiple notes and titles",
+        "Icon": "note",
+        "Id": "nothing-notes-widget",
+        "License": "GPL-2.0-or-later",
+        "Name": "Nothing Notes",
+        "Version": "1.0"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

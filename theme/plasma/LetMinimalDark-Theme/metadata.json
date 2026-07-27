@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Letaryat"
+            }
+        ],
+        "Category": "Plasma Theme",
+        "Description": "Let-MinimalDark Plasma Theme by Letaryat",
+        "EnabledByDefault": false,
+        "Id": "Let-MinimalDark",
+        "License": "LGPL",
+        "Name": "Let-MinimalDark",
+        "Version": "1.0",
+        "Website": ""
+    },
+    "X-Plasma-API": "5.0"
+}

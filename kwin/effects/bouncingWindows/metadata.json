@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "KWin/Effect",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "none",
+                "Name": "bitran0"
+            }
+        ],
+        "Category": "Window Open/Close Animation",
+        "Description": "Animate window open/close with a blur-compatible bounce effect",
+        "EnabledByDefault": false,
+        "Id": "bouncingWindows",
+        "License": "GPL",
+        "Name": "Bouncing Windows",
+        "HasConfig": true
+    },
+    "X-KDE-Ordering": 60,
+    "X-KWin-Exclusive-Category": "toplevel-open-close-animation",
+    "X-KDE-ConfigModule": "kcm_kwin4_genericscripted",
+    "X-Plasma-API": "javascript",
+    "X-KDE-PluginInfo-HasConfig": true
+}

@@ -1,0 +1,9 @@
+.cache/
+build/
+*.log
+*.bak
+*~
+screenshots/desktop-final.png
+screenshots/desktop-ultrawide.png
+screenshots/desktop-ultrawide-final.png
+screenshots/desktop-ultrawide-final2.png

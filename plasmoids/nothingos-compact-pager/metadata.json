@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Local NothingOS Rice"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Compact NothingOS virtual desktop indicator",
+        "EnabledByDefault": true,
+        "Icon": "user-desktop",
+        "Id": "nothingos-compact-pager",
+        "License": "MIT",
+        "Name": "NothingOS Compact Pager",
+        "Version": "1.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

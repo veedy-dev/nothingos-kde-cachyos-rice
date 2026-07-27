@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EffectConfig</class>
+
+ <widget class="QWidget" name="EffectConfig">
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <property name="spacing">
+    <number>12</number>
+   </property>
+
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::ExpandingFieldsGrow</enum>
+     </property>
+
+     <property name="labelAlignment">
+      <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+
+     <property name="formAlignment">
+      <set>Qt::AlignTop</set>
+     </property>
+
+     <!-- Open Duration -->
+
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelOpen">
+       <property name="text">
+        <string>Open Duration:</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="kcfg_OpenDuration">
+
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed"/>
+       </property>
+
+       <property name="minimum">
+        <number>50</number>
+       </property>
+
+       <property name="maximum">
+        <number>2000</number>
+       </property>
+
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+
+       <property name="value">
+        <number>250</number>
+       </property>
+
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+      </widget>
+     </item>
+
+     <!-- Close Duration -->
+
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelClose">
+       <property name="text">
+        <string>Close Duration:</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="kcfg_CloseDuration">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed"/>
+       </property>
+       <property name="minimum">
+        <number>40</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+      </widget>
+     </item>
+
+     <!-- Start Scale -->
+
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelScaleIn">
+       <property name="text">
+        <string>Start Scale (Open):</string>
+       </property>
+      </widget>
+     </item>
+
+     <item row="2" column="1">
+      <widget class="QDoubleSpinBox" name="kcfg_ScaleInFactor">
+
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed"/>
+       </property>
+
+       <property name="minimum">
+        <double>0.100000000000000</double>
+       </property>
+
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+
+       <property name="singleStep">
+        <double>0.050000000000000</double>
+       </property>
+
+       <property name="decimals">
+        <number>2</number>
+       </property>
+
+       <property name="value">
+        <double>0.800000000000000</double>
+       </property>
+
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+
+     <property name="sizeHint">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>

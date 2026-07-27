@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Local NothingOS Rice"
+            }
+        ],
+        "Description": "Reveal the left and right desktop widget groups near their screen edges",
+        "EnabledByDefault": true,
+        "Id": "nothingos-edge-groups",
+        "License": "MIT",
+        "Name": "NothingOS Widget Edge Groups",
+        "Version": "1.0"
+    },
+    "X-Plasma-API": "javascript"
+}
