@@ -1,4 +1,4 @@
-# NothingOS-inspired KDE Plasma rice
+# Nothing Mono KDE
 
 Set up a complete monochrome, NothingOS-inspired desktop on KDE Plasma 6,
 regardless of which Linux distribution you use.
@@ -50,8 +50,8 @@ installer with `--no-packages`.
 Review the script first—this changes your Plasma layout and KDE preferences.
 
 ```bash
-git clone https://github.com/veedy-dev/nothingos-kde-plasma-rice.git
-cd nothingos-kde-plasma-rice
+git clone https://github.com/veedy-dev/nothing-mono-kde.git
+cd nothing-mono-kde
 ./install.sh
 ```
 
