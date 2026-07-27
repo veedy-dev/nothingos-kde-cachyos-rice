@@ -1,33 +1,43 @@
 # NothingOS-inspired KDE Plasma rice
 
-A reproducible version of my monochrome NothingOS-style CachyOS desktop,
-tuned for KDE Plasma 6, Wayland, OLED displays, and a 5120×1440 Odyssey G9.
+Set up a complete monochrome, NothingOS-inspired desktop on KDE Plasma 6.
+The installer configures the Plasma layout, widgets, themes, animations,
+OLED-friendly behavior, and Fastfetch while backing up your existing desktop
+configuration first.
+
+The layout supports regular 16:9 screens as well as 21:9 and 32:9 ultrawide
+displays. Widget sizes and edge positions are calculated from the active
+screen geometry instead of being tied to one monitor.
 
 ![Desktop preview](screenshots/nothingos-kde-g9.png)
 
-## Highlights
+## What the installer configures
 
-- square, OLED-black status panel and medium dynamic application dock
-- grouped left/right widgets that independently hide after 10 seconds
-- calendar, Jakarta weather, Tokyo world clock, notes, CPU, RAM, and a wide
-  media player
-- compact clickable `1 2 3` virtual desktop pager
-- Nothing dot font throughout the widgets and panel clock
-- matching desktop and lock-screen wallpaper
-- quick but visible bouncing close animation
-- cursor hiding after 15 seconds and display power-off after 60 seconds
-- a shareable monochrome Fastfetch preset
-- automatic timestamped backup plus a generated restore script
+- a responsive desktop layout for 16:9, 21:9, and 32:9 screens
+- an OLED-black status bar and a content-sized application dock
+- independently hiding left and right widget groups
+- configurable weather, world clock, calendar, notes, system monitoring, and
+  media controls
+- a compact, clickable virtual desktop switcher
+- monochrome themes, icons, cursors, wallpaper, and Nothing-style typography
+- matching desktop and lock-screen appearance
+- tuned KWin animations with a short but visible closing effect
+- OLED-conscious cursor hiding, panel hiding, and display power management
+- a matching Fastfetch preset
+- automatic backups and a generated restoration script
 
 ## Supported setup
 
 - CachyOS or Arch Linux
 - KDE Plasma **6.7+**
 - a Plasma Wayland session
-- one primary display; the layout scales from 1920×1080 through 5120×1440
+- one primary display
+- standard 16:9 resolutions such as 1920×1080 and 2560×1440
+- ultrawide 21:9 and 32:9 resolutions up to 5120×1440
 
-The 32:9 G9 layout is the reference target. Other resolutions use the same
-edge-column design with proportional margins.
+The screenshot shows the 5120×1440 reference layout. On a regular 16:9
+display, the same widgets stay anchored to the left and right edges with
+scaled sizes and margins, leaving the center available for windows.
 
 ## Install
 
@@ -72,12 +82,18 @@ fastfetch
 The preset is derived from LierB's Groups concept and restyled to match this
 rice. It is resolution- and hardware-independent.
 
-## Personalizing
+## Customize the setup
 
-- Change the city and time zone near the top of `layout/layout.js`.
-- Change pinned dock apps in `layout/layout.js`.
-- Change the edge hide delay in `native/edge-groups/main.cpp` (default 10 s).
-- Change display timeout in `install.sh` (default 60 s).
+Before installing, edit the clearly labeled values in `layout/layout.js` to
+choose:
+
+- weather location
+- world-clock city and time zone
+- pinned dock applications
+
+You can also change the widget hide delay in
+`native/edge-groups/main.cpp` and the display power-off timeout in
+`install.sh`.
 
 See [docs/COMPONENTS.md](docs/COMPONENTS.md) for the exact component list and
 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for common issues.
