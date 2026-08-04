@@ -33,7 +33,7 @@ T.Slider {
             anchors.fill: parent
             radius: width / 2
             color: "#f25e70"
-            border.color: "#303030"
+            border.color: controlRoot.hovered ? "#ffffff" : "#303030"
             border.width: 1
         }
     }
