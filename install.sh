@@ -132,6 +132,27 @@ else
     copy_tree "$repo_dir/kwin/effects" "$data_home/kwin/effects"
     copy_tree "$repo_dir/kwin/scripts" "$data_home/kwin/scripts"
 
+    qt_qml_root="$(qmake6 -query QT_INSTALL_QML)"
+    copy_tree "$qt_qml_root/org/kde/desktop" \
+        "$install_root/qtquickcontrols/org/kde/desktop"
+    run sed -i '/^prefer /d' \
+        "$install_root/qtquickcontrols/org/kde/desktop/qmldir"
+    run install -m 0644 \
+        "$repo_dir/theme/qtquickcontrols/org/kde/desktop/Slider.qml" \
+        "$install_root/qtquickcontrols/org/kde/desktop/Slider.qml"
+
+    run install -d "$config_home/plasma-workspace/env"
+    if $dry_run; then
+        printf '+ generate %q\n' \
+            "$config_home/plasma-workspace/env/nothing-mono-kde.sh"
+    else
+        printf 'export QML_IMPORT_PATH=%q${QML_IMPORT_PATH:+:$QML_IMPORT_PATH}\n' \
+            "$install_root/qtquickcontrols" \
+            > "$config_home/plasma-workspace/env/nothing-mono-kde.sh"
+        printf '%s\n' 'export QT_QUICK_CONTROLS_STYLE=org.kde.desktop' \
+            >> "$config_home/plasma-workspace/env/nothing-mono-kde.sh"
+    fi
+
     run install -d "$data_home/fonts/NothingOS"
     run install -m 0644 "$repo_dir/fonts/ndot.ttf" \
         "$data_home/fonts/NothingOS/ndot.ttf"
@@ -273,6 +294,8 @@ for source in "\$backup_dir/config/"*; do
     [[ -e "\$source" ]] || continue
     cp -a "\$source" "\$config_home/\$(basename "\$source")"
 done
+rm -f "\$config_home/plasma-workspace/env/nothing-mono-kde.sh"
+systemctl --user unset-environment QML_IMPORT_PATH QT_QUICK_CONTROLS_STYLE 2>/dev/null || true
 qdbus6 org.kde.KWin /KWin reconfigure 2>/dev/null || true
 systemctl --user restart plasma-plasmashell.service
 printf 'Restored KDE configuration from %s\\n' "\$backup_dir"

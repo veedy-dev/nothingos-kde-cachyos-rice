@@ -12,6 +12,7 @@ components used by the rice. Copyright remains with each upstream author.
 | Window Title | https://github.com/dhruv8sh/plasma6-window-title-applet | GPL-2.0 |
 | Yet Another Monochrome Icon Theme | https://github.com/googIyEYES/Yet-Another-Monochrome-Icon-Theme | See upstream |
 | LetMinimalDark theme | https://github.com/Letaryat/kde-LetMinimalDark-Theme | See upstream |
+| KDE QQC2 Desktop Style | https://invent.kde.org/frameworks/qqc2-desktop-style | LGPL-3.0 or GPL-2.0+ |
 | Fastfetch Groups preset inspiration | https://github.com/LierB/fastfetch | See upstream |
 
 The Nothing-style font included in individual widget packages and `fonts/`
@@ -21,4 +22,3 @@ rights holder requests a change, open an issue.
 Nothing OS and Nothing are trademarks of Nothing Technology Limited. This is
 an unofficial community theme and is not affiliated with or endorsed by
 Nothing.
-
