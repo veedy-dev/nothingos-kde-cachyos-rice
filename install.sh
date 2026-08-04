@@ -140,6 +140,9 @@ else
     run install -m 0644 \
         "$repo_dir/theme/qtquickcontrols/org/kde/desktop/Slider.qml" \
         "$install_root/qtquickcontrols/org/kde/desktop/Slider.qml"
+    run install -m 0644 \
+        "$repo_dir/theme/qtquickcontrols/org/kde/desktop/Switch.qml" \
+        "$install_root/qtquickcontrols/org/kde/desktop/Switch.qml"
 
     run install -d "$config_home/plasma-workspace/env"
     if $dry_run; then
